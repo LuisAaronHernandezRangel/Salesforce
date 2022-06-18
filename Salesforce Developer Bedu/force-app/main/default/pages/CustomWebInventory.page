@@ -1,0 +1,20 @@
+<apex:page standardController="Quote" extensions="CustomWebInventoryController" >
+    <apex:form >
+        <apex:pageMessages ></apex:pageMessages>
+        <apex:outputLabel value="Product Code" />
+        <apex:inputText value="{!productCode}" />
+        <apex:commandButton value="buscar" action="{!Buscar}"/>
+        <apex:pageBlock title="Productos">
+            <apex:pageBlockSection columns="5">
+            	
+         
+                <apex:outputText value="Nombre de Producto "> <apex:outputLabel value="{!productName}" /> </apex:outputText>
+                <apex:outputText value="Precio Unitario "> <apex:outputLabel value="{!productPrice}"/> </apex:outputText>
+                <apex:outputText value="External Id"> <apex:outputLabel value="{!productExtId}"/> </apex:outputText>
+                <apex:inputText value="{!productQuantity}"/>
+                <apex:outputText value="Producto Disponible"> <apex:outputLabel value="{!productInStock}"/> </apex:outputText>
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
